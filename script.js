@@ -1,4 +1,4 @@
-function testLoad() {
+window.onload = function() {
     let dataId = this.getAttribute('data-id');
     if (dataId) {
         startLoad(dataId);
