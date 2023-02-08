@@ -2,7 +2,7 @@ window.onload = function() {
     let dataId = this.getAttribute('data-id');
     if (dataId) {
         startLoad(dataId);
-        setTimeout(stopAllLoad, 10000);
+        setTimeout(stopAllLoad, 1000);
     }
 }
 
