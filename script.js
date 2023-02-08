@@ -3,6 +3,7 @@
 
 function testLoad() {
         startLoad();
+        stopAllLoad();
         setTimeout(stopAllLoad, 5000);
 }
 
