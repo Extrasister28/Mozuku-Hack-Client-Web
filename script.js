@@ -1,7 +1,7 @@
 const loader = document.getElementById('js-loader');
 window.addEventListener('load', () => {
   const ms = 400;
-  loader.style.transition = 'opacity ' + ms + 'ms';
+  //loader.style.transition = 'opacity ' + ms + 'ms';
   
   const loaderOpacity = function(){
     loader.style.opacity = 0;
