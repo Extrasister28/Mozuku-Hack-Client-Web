@@ -1,8 +1,18 @@
 function init() {
-    let dataId = this.getAttribute('loadingjs');
+    let elements = document.getElementsByTagName('div');
+    for (let element of elements) {
+        if (element.getAttribute('data-id')) {
+            element.addEventListener('click', testLoad);
+        }
+    }
+    stopAllLoad();
+}
+
+function testLoad() {
+    let dataId = this.getAttribute('data-id');
     if (dataId) {
         startLoad(dataId);
-        setTimeout(stopAllLoad, 10000);
+        setTimeout(stopAllLoad, 3000);
     }
 }
 
