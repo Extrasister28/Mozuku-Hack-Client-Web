@@ -1,7 +1,5 @@
-function init() {
     window.addEventListener('Load', testLoad);
     stopAllLoad();
-}
 
 function testLoad() {
         startLoad();
@@ -19,4 +17,3 @@ function stopAllLoad() {
     }
 }
 
-window.addEventListener('DOMContentLoaded', init);
