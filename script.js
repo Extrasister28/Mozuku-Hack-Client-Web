@@ -1,14 +1,17 @@
-function init() {
-    document.getElementById(id).style.visibility = 'visible';
-    stopAllLoad();
-    setTimeout(stopAllLoad, 10000);
-}
-
-function stopAllLoad() {
-    let elements = document.getElementsByClassName('loading');
-    for (let element of elements) {
-        element.style.visibility = 'hidden';
-    }
-}
-
-window.addEventListener('load', init);
+const loader = document.getElementById('js-loader');
+window.addEventListener('load', () => {
+  const ms = 400;
+  loader.style.transition = 'opacity ' + ms + 'ms';
+  
+  const loaderOpacity = function(){
+    loader.style.opacity = 0;
+  }
+  const loaderDisplay = function(){
+    loader.style.display = "none";
+  }
+  // setTimeout(loaderOpacity, 1);
+  // setTimeout(loaderDisplay, ms);
+  // 時間指定
+  setTimeout(loaderOpacity, 5000);
+  setTimeout(loaderDisplay, 5000 + ms);
+});
