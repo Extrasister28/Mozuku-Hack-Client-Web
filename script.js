@@ -1,8 +1,8 @@
-window.onload = function() {
+function　init() {
     let dataId = this.getAttribute('data-id');
     if (dataId) {
         startLoad(dataId);
-        setTimeout(stopAllLoad, 1000);
+        setTimeout(stopAllLoad, 10000);
     }
 }
 
