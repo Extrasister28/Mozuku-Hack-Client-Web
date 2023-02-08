@@ -11,9 +11,6 @@ function startLoad() {
 }
 
 function stopAllLoad() {
-    let elements = document.getElementsByClassName('loading');
-    for (let element of elements) {
-        element.style.visibility = 'hidden';
-    }
+    document.getElementById("loadingwindow").style.visibility = 'hidden';
 }
 
