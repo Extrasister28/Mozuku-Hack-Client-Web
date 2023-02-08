@@ -266,90 +266,62 @@ footer {
   }
 }
 
-button {
-    padding: 10px;
-    margin: 10px;
-    font-size: 12pt;
+.loader {
+  align-items: center;
+  background: #fff;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+.loader::after {
+  -webkit-animation: loader 0.5s linear infinite;
+          animation: loader 0.5s linear infinite;
+  border: 1px solid orange;
+  border-radius: 50%;
+  border-right: 1px solid rgba(255, 165, 0, 0.2);
+  border-top: 1px solid rgba(255, 165, 0, 0.2);
+  content: "";
+  height: 70px;
+  width: 70px;
 }
 
-.loading {
-    /* 画面最大 */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    /* 背景色（黒、不透明度80%） */
-    background-color: #000000;
-    opacity: 1.0;
-    /* フレックスコンテナ（縦並べ、横中央、縦中央） */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* 表示を一番上 */
-    z-index: 999;
-    /* 選択付加 */
-    user-select: none;
+@-webkit-keyframes loader {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-.load-text {
-    color: white;
-    font-size: 16pt;
+@keyframes loader {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
-.load-blink {
-    animation: blink 1s linear infinite;
+main {
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 25px;
 }
-
-@keyframes blink {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
+main h1 {
+  font-size: 32px;
+  font-weight: bold;
 }
-
-.load-circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 10px solid rgba(255, 255, 255, 0.5);
-    border-top-color: rgba(255, 255, 255, 1);
-    animation: rotate 1s linear infinite;
-}
-
-@keyframes rotate {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.load-blink-dot {
-    animation: blink-dot 1.2s linear infinite;
-    opacity: 0;
-}
-
-@keyframes blink-dot {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.load-spin {
-    animation: rotate2 2s linear infinite;
-}
-
-@keyframes rotate2 {
-    to {
-        transform: rotate(-360deg);
-    }
-}
-
-.load-absolute {
-    position: absolute;
+main p {
+  font-size: 16px;
+  margin-top: 30px;
 }
