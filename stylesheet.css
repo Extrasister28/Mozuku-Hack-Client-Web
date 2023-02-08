@@ -286,3 +286,40 @@ footer {
     /* 選択付加 */
     user-select: none;
 }
+
+.load-text {
+    color: white;
+    font-size: 16pt;
+}
+
+.load-blink {
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.load-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.5);
+    border-top-color: rgba(255, 255, 255, 1);
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.load-absolute {
+    position: absolute;
+}
