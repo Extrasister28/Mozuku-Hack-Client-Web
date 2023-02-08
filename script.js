@@ -1,7 +1,7 @@
 function init() {
     document.getElementById(id).style.visibility = 'visible';
     stopAllLoad();
-    setTimeout(stopAllLoad, 3000);
+    setTimeout(stopAllLoad, 10000);
 }
 
 function stopAllLoad() {
