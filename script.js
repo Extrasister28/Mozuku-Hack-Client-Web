@@ -1,4 +1,4 @@
-function　init() {
+function init() {
     let dataId = this.getAttribute('data-id');
     if (dataId) {
         startLoad(dataId);
