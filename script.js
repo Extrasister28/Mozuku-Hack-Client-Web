@@ -12,7 +12,7 @@ function testLoad() {
     let dataId = this.getAttribute('data-id');
     if (dataId) {
         startLoad(dataId);
-        setTimeout(stopAllLoad, 10000);
+        setTimeout(stopAllLoad, 100000);
     }
 }
 
