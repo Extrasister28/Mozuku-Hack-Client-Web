@@ -1,5 +1,5 @@
 function init() {
-    let dataId = this.getAttribute('data-id');
+    let dataId = this.getAttribute('loading');
     if (dataId) {
         startLoad(dataId);
         setTimeout(stopAllLoad, 10000);
