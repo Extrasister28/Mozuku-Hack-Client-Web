@@ -1,11 +1,11 @@
 function init() {
-    window.addEventListener('DOMContentLoaded', testLoad);
+    window.addEventListener('Load', testLoad);
     stopAllLoad();
 }
 
 function testLoad() {
         startLoad();
-        setTimeout(stopAllLoad, 3000);
+        setTimeout(stopAllLoad, 5000);
 }
 
 function startLoad() {
