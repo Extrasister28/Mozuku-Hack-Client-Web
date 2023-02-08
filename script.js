@@ -1,17 +1,31 @@
-const loader = document.getElementById('js-loader');
-window.addEventListener('load', () => {
-  const ms = 400;
-  loader.style.transition = 'opacity ' + ms + 'ms';
-  
-  const loaderOpacity = function(){
-    loader.style.opacity = 0;
+
+$(function () {
+  // ローダー終了
+  function end_loader() {
+    $('.loader').fadeOut(800);
   }
-  const loaderDisplay = function(){
-    loader.style.display = "none";
+  // テキスト表示
+  function show_txt() {
+    $('.loader .txt-content .txt').fadeIn(400);
   }
-  // setTimeout(loaderOpacity, 1);
-  // setTimeout(loaderDisplay, ms);
-  // 時間指定
-  setTimeout(loaderOpacity, 5000);
-  setTimeout(loaderDisplay, 5000 + ms);
-});
+  // テキスト非表示
+  function hide_txt() {
+    $('.loader .txt-content .txt').fadeOut(400);
+  }
+
+  // タイマー処理
+  $(window).on('load', function () {
+    // 処理①
+    setTimeout(function () {
+      show_txt();
+    }, 1000)
+    // 処理②
+    setTimeout(function () {
+      hide_txt();
+    }, 3500)
+    // 処理③
+    setTimeout(function () {
+      end_loader();
+    }, 4500)
+  })
+})
