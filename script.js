@@ -1,23 +1,7 @@
 function init() {
-    let elements = document.getElementsByTagName('div');
-    for (let element of elements) {
-        if (element.getAttribute('data-id')) {
-            element.addEventListener('click', testLoad);
-        }
-    }
-    stopAllLoad();
-}
-
-function testLoad() {
-    let dataId = this.getAttribute('data-id');
-    if (dataId) {
-        startLoad(dataId);
-        setTimeout(stopAllLoad, 3000);
-    }
-}
-
-function startLoad(id) {
     document.getElementById(id).style.visibility = 'visible';
+    stopAllLoad();
+    setTimeout(stopAllLoad, 3000);
 }
 
 function stopAllLoad() {
