@@ -1,5 +1,4 @@
     window.addEventListener('Load', testLoad);
-    stopAllLoad();
 
 function testLoad() {
         startLoad();
