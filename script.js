@@ -6,7 +6,6 @@ function init() {
 function testLoad() {
         startLoad();
         setTimeout(stopAllLoad, 3000);
-    }
 }
 
 function startLoad() {
