@@ -1,19 +1,21 @@
     window.addEventListener('Load', testLoad);
     window.setTimeout(fade, 5000);
     window.setTimeout(stopAllLoad, 6000);
+
+const handle = (event) => {
+    event.preventDefault();
+  }
+
+
 function testLoad() {
         startLoad();
         stopAllLoad();
 }
 
-function noscroll(event) {
-    event.preventDefault();
-}
-
 function startLoad() {
     document.getElementById("loadingwindow").style.visibility = 'visible';
-    document.removeEventListener('touchmove', noscroll, {passive: false});
-    document.removeEventListener('wheel', noscroll, {passive: false});
+    document.addEventListener('touchmove', handle, { passive: false });
+    document.addEventListener('mousewheel', handle, { passive: false });
 }
 
 function fade() {
@@ -30,8 +32,8 @@ function fade() {
 }
 
 function stopAllLoad() {
-    document.addEventListener('touchmove', noscroll, {passive: false});
-    document.addEventListener('wheel', noscroll, {passive: false});
+    document.addEventListener('touchmove', handle, { passive: false });
+    document.addEventListener('mousewheel', handle, { passive: false });
     let elements = document.getElementsByClassName('loading');
     for (let element of elements) {
         element.style.visibility = 'hidden';
