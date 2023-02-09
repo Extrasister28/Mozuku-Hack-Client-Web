@@ -273,9 +273,9 @@ footer {
     left: 0;
     width: 100vw;
     height: 100vh;
-    /* 背景色（黒、不透明度80%） */
+    /* 背景色（黒、不透明度100%） */
     background-color: #000000;
-    opacity: 0.8;
+    opacity: 1.0;
     /* フレックスコンテナ（縦並べ、横中央、縦中央） */
     display: flex;
     flex-direction: column;
