@@ -1,6 +1,7 @@
-    window.addEventListener('Load', testLoad);
-    window.setTimeout(fade, 5000);
-    window.setTimeout(stopAllLoad, 6000);
+window.addEventListener('Load', testLoad);
+let time = Math.floor(Math.random() * 5) + 1;
+window.setTimeout(fade, time * 1000);
+window.setTimeout(stopAllLoad, time * 1000 + 6000);
 
 function testLoad() {
         startLoad();
