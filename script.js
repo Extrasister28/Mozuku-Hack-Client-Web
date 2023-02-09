@@ -1,10 +1,10 @@
 let time = Math.floor(Math.random() * 5) + 1;
 window.addEventListener('Load', startLoad);
+window.setTimeout(stopAllLoad, time * 1000 + 6000);
+window.setTimeout(fade, time * 1000);
 
 function startLoad() {
-    window.setTimeout(fade, time * 1000);
     stopAllLoad();
-    window.setTimeout(stopAllLoad, time * 1000 + 6000);
     document.getElementById("loadingwindow").style.visibility = 'visible';
 }
 
