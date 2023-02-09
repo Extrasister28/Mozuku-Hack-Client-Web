@@ -45,17 +45,12 @@ a {
   margin-bottom: 20px;
 }
 
-.facebook {
-  background-color: #3b5998;
-  margin-right: 10px;
-}
-
 .twitter {
   background-color: #55acee;
 }
 
 .download {
-  background-color: #f7f7f7;
+  background-color: #3b5998;
 }
 
 .btn {
