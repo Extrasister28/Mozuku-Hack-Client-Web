@@ -11,7 +11,7 @@ function startLoad() {
 }
 
 function fade() {
-    document.querySelector('loadingwindow').animate(
+    document.querySelector('#loadingwindow').animate(
   [
     { opacity: 1 },
     { opacity: 0 }
