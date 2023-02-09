@@ -8,6 +8,8 @@ function testLoad() {
 
 function startLoad() {
     document.getElementById("loadingwindow").style.visibility = 'visible';
+    document.removeEventListener('touchmove', noscroll);
+    document.removeEventListener('wheel', noscroll);
 }
 
 function fade() {
@@ -24,6 +26,8 @@ function fade() {
 }
 
 function stopAllLoad() {
+    document.addEventListener('touchmove', noscroll, {passive: false});
+    document.addEventListener('wheel', noscroll, {passive: false});
     let elements = document.getElementsByClassName('loading');
     for (let element of elements) {
         element.style.visibility = 'hidden';
