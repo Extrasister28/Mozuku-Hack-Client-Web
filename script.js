@@ -8,8 +8,8 @@ function testLoad() {
 
 function startLoad() {
     document.getElementById("loadingwindow").style.visibility = 'visible';
-    document.removeEventListener('touchmove', noscroll);
-    document.removeEventListener('wheel', noscroll);
+    document.removeEventListener('touchmove', noscroll, {passive: false});
+    document.removeEventListener('wheel', noscroll, {passive: false});
 }
 
 function fade() {
