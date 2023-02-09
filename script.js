@@ -1,9 +1,8 @@
     window.addEventListener('Load', testLoad);
-
+    window.setTimeout(stopAllLoad, 5000);
 function testLoad() {
         startLoad();
         stopAllLoad();
-        setTimeout(stopAllLoad, 5000);
 }
 
 function startLoad() {
