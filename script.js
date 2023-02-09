@@ -6,6 +6,10 @@ function testLoad() {
         stopAllLoad();
 }
 
+function noscroll(event) {
+    event.preventDefault();
+}
+
 function startLoad() {
     document.getElementById("loadingwindow").style.visibility = 'visible';
     document.removeEventListener('touchmove', noscroll, {passive: false});
