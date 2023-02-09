@@ -17,7 +17,7 @@ function fade() {
     { opacity: 0 }
   ],
   {
-    duration: 3000,
+    duration: 1000,
     fill: 'forwards'
   }
 );
