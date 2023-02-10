@@ -292,7 +292,7 @@ footer {
 }
 
 .load-blink {
-    animation: blink 1s linear infinite;
+    animation: blink 0.5s linear infinite;
 }
 
 @keyframes blink {
